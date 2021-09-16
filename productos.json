@@ -4,7 +4,7 @@
         "nombre":"Wica Clásica",
         "ingredienteBase":"Poroto rojo con cebolla caramelizada",
         "precio":300,
-        "imagen":"/Multimedia/Clasica.jpg"
+        "imagen":"Multimedia/Clasica.jpg"
     },
 
     {
@@ -12,7 +12,7 @@
         "nombre":"Wica Gourmet",
         "ingredienteBase":"Garbanzos con tomates al romero",
         "precio":350,
-        "imagen":"/Multimedia/Gourmet.jpg"
+        "imagen":"Multimedia/Gourmet.jpg"
     },
 
     {
@@ -20,7 +20,7 @@
         "nombre":"Wica Diabla",
         "ingredienteBase":"Poroto negro con morrón rojo y verde",
         "precio":400,
-        "imagen":"/Multimedia/Diabla.jpg"
+        "imagen":"Multimedia/Diabla.jpg"
     },
 
     {
@@ -28,6 +28,6 @@
         "nombre":"Wica Turca",
         "ingredienteBase":"Lenteja turca con zapallo, zanahoria y curry",
         "precio":450,
-        "imagen":"/Multimedia/Turca.jpg"
+        "imagen":"Multimedia/Turca.jpg"
     }
 ]
