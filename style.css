@@ -1,0 +1,812 @@
+@charset "UTF-8";
+.navbar-custom {
+  background-color: #ffb11f;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav li a {
+  color: #f5f5dc !important;
+}
+
+nav li:hover {
+  background-color: #e0bf93 !important;
+}
+
+@media only screen and (max-width: 992px) {
+  /* Media query: navbar becomes mobile sidebar under lg breakpoint */
+  .navbar-collapse.collapsing .navbar-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -45%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .navbar-collapse.show .navbar-nav {
+    position: fixed;
+    top: 55px;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    width: 45% !important;
+    background-color: orange;
+    -webkit-transition: left 0.35s ease;
+    transition: left 0.35s ease;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    z-index: 10;
+  }
+}
+
+#my-carousel {
+  margin-bottom: 1px;
+}
+
+#my-carousel img {
+  height: 95vh;
+}
+
+#Nosotros {
+  background-image: url("../Multimedia/Fondo1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 50px 0 10px 0;
+}
+
+@media only screen and (min-width: 992px) {
+  #Nosotros {
+    background-attachment: fixed;
+  }
+}
+
+#Nosotros p {
+  font-size: 13.84615px;
+  font-family: "Tenor Sans", sans-serif;
+  color: #ffffff;
+  background-color: #ff9935;
+  opacity: 0.9;
+  padding: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1% 5%;
+}
+
+@media only screen and (min-width: 992px) {
+  #Nosotros p {
+    font-size: 25.2px;
+    padding: 25px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #Nosotros p span {
+    font-size: 21.6px;
+  }
+}
+
+#Nosotros video {
+  width: 90%;
+}
+
+@media only screen and (min-width: 992px) {
+  #Nosotros video {
+    /*Media query: for large screens*/
+    width: 50%;
+  }
+}
+
+#Productos {
+  min-height: 100vh;
+}
+
+#Productos h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  color: beige;
+  text-align: center;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 10px 2.5px 10px;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  background-color: orange;
+  border-radius: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  #Productos h2 {
+    /*Media query: for large screens*/
+    font-size: 25.2px;
+  }
+}
+
+#Productos div {
+  /*Div containing the 4 procuct divs*/
+  width: 100%;
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 992px) {
+  #Productos div {
+    /*Media query: for large screens*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 50px 0;
+  }
+}
+
+#Productos div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Productos div div img {
+  height: 250px;
+}
+
+#Productos div div p {
+  color: green;
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+}
+
+#Productos div div button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  font-size: 0.7em;
+  padding: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  border-color: #ffffff;
+}
+
+#Productos div div button a {
+  color: #f5f5dc;
+  text-decoration: none;
+}
+
+.card-clásica button {
+  background-color: #634c4c;
+}
+
+.card-gourmet button {
+  background-color: #c06728;
+}
+
+.card-diabla button {
+  background-color: darkred;
+}
+
+.card-turca button {
+  background-color: olive;
+}
+
+#Donde-comprar {
+  background-color: blanchedalmond;
+  min-height: 100vh;
+  padding-bottom: 10px;
+}
+
+#Donde-comprar h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  color: beige;
+  text-align: center;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 10px 2.5px 10px;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  background-color: orange;
+  border-radius: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  #Donde-comprar h2 {
+    /*Media query: for large screens*/
+    font-size: 25.2px;
+  }
+}
+
+#Donde-comprar iframe {
+  width: 90%;
+}
+
+footer {
+  background-color: #ffffff;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+footer .ig-cta {
+  width: 75%;
+}
+
+@media only screen and (max-width: 991px) {
+  footer .ig-cta {
+    width: 100%;
+  }
+}
+
+footer .ig-gallery {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px) {
+  footer .ig-gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  footer .ig-gallery a {
+    width: 40%;
+    height: auto;
+  }
+}
+
+footer .footer-box {
+  height: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: darkslategray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-box div .logo-final {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 0 5%;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer-box div .logo-final {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+footer .footer-box div .certificacion {
+  height: 35px;
+  width: 35px;
+  border-radius: 30%;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer-box div .certificacion {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+footer .footer-box li {
+  list-style: none;
+}
+
+footer .footer-box li a {
+  color: beige !important;
+  font-size: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer-box li a {
+    /*Media query: for large screens*/
+    font-size: 18px;
+  }
+}
+
+footer .footer-box p {
+  color: beige;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+footer .footer-box .Redes img {
+  margin: 2%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer-box .Redes img {
+    /*Media query: for large screens*/
+    width: 50px;
+    height: 50px;
+  }
+}
+
+footer .footer-box .Redes a {
+  text-decoration: none;
+}
+
+footer .footer-box .Redes p {
+  font-size: 10.28571px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@media only screen and (min-width: 992px) {
+  footer .footer-box .Redes p {
+    /*Media query: for large screens*/
+    font-size: 18px;
+  }
+}
+
+.whatsapp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1%;
+  right: 0.5%;
+  z-index: 10;
+}
+
+.banner {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  color: beige;
+  margin: 55px 0 5px 0;
+  padding: 10px 0 5px 50px;
+}
+
+@media only screen and (min-width: 992px) {
+  .banner {
+    margin: 55px 0 10px 0;
+    padding: 20px 0 10px 50px;
+  }
+}
+
+.banner-1 {
+  background-color: #806262;
+}
+
+.banner-2 {
+  background-color: #d88143;
+}
+
+.banner-3 {
+  background-color: #be0000;
+}
+
+.banner-4 {
+  background-color: #b3b300;
+}
+
+.presentacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .presentacion {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.presentacion .small-img img {
+  height: 70px;
+  width: 70px;
+  margin: 10px 0px 10px 10px;
+  cursor: pointer;
+  display: block;
+  opacity: 0.6;
+}
+
+.presentacion .small-img img:hover {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .presentacion .small-img img {
+    height: 110px;
+    width: 110px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .presentacion .small-img img {
+    height: 110px;
+    width: 110px;
+  }
+}
+
+.presentacion .img-container {
+  padding: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+  .presentacion .img-container {
+    padding: 30px;
+  }
+}
+
+.presentacion .img-container img {
+  height: 260px;
+  width: 260px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .presentacion .img-container img {
+    height: 210px;
+    width: 210px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .presentacion .img-container img {
+    height: 410px;
+    width: 410px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .presentacion .img-container img {
+    height: 470px;
+    width: 470px;
+  }
+}
+
+.presentacion .lista-ingredientes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px 30px 30px 0;
+  border: double beige;
+  padding: 10px 15px;
+}
+
+.presentacion .lista-ingredientes h3 {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 20.7px;
+  color: beige;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .presentacion .lista-ingredientes h3 {
+    font-size: 22.5px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .presentacion .lista-ingredientes h3 {
+    font-size: 27px;
+  }
+}
+
+.presentacion .lista-ingredientes p {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 16.36364px;
+  color: beige;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .presentacion .lista-ingredientes p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .presentacion .lista-ingredientes p {
+    font-size: 18px;
+  }
+}
+
+.presentacion .lista-1 {
+  background-color: #554141;
+}
+
+.presentacion .lista-2 {
+  background-color: #c06728;
+}
+
+.presentacion .lista-3 {
+  background-color: darkred;
+}
+
+.presentacion .lista-4 {
+  background-color: olive;
+}
+
+.other-products h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  color: beige;
+  text-align: center;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 10px 2.5px 10px;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  background-color: orange;
+  border-radius: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  .other-products h3 {
+    /*Media query: for large screens*/
+    font-size: 25.2px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .other-products h3 {
+    /*Media query: for large screens*/
+    font-size: 27px;
+  }
+}
+
+.other-products div {
+  /*Div containing the 3 procuct divs*/
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 992px) {
+  .other-products div {
+    /*Media query: for large screens*/
+    font-size: 27px;
+  }
+}
+
+.other-products div div {
+  /*Each product divs containing img, p and button*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.other-products div div img {
+  height: 180px;
+}
+
+@media only screen and (max-width: 375px) {
+  .other-products div div img {
+    /*Media query: for S and M screens*/
+    height: 100px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 475px) {
+  .other-products div div img {
+    /*Media query: for L screens*/
+    height: 140px;
+  }
+}
+
+.other-products div div p {
+  color: green;
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 375px) {
+  .other-products div div p {
+    /*Media query: for S and M screens*/
+    font-size: 9px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 475px) {
+  .other-products div div p {
+    /*Media query: for L screens*/
+    font-size: 12px;
+  }
+}
+
+.other-products div div button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  font-size: 0.7em;
+  padding: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  border-color: white;
+}
+
+@media only screen and (max-width: 375px) {
+  .other-products div div button {
+    /*Media query: for S and M screens*/
+    font-size: 9px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 475px) {
+  .other-products div div button {
+    /*Media query: for L screens*/
+    font-size: 12px;
+  }
+}
+
+.other-products div div button a {
+  color: beige;
+  text-decoration: none;
+}
+
+.card-clásica button {
+  background-color: #634c4c;
+}
+
+.card-gourmet button {
+  background-color: #c06728;
+}
+
+.card-diabla button {
+  background-color: darkred;
+}
+
+.card-turca button {
+  background-color: olive;
+}
+
+button{
+    color: white;
+}
+
+#resumen{
+    display: none;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin:50px 25%;
+    background-color: blanchedalmond;
+    border: solid orange;
+    width: 50%;
+    position: absolute;
+    top:95%;
+}
+
+.items-carrito{
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.items-carrito p{
+    color: dimgray;
+}
+
+h3{
+    color:dimgray;
+}
+
+
+b{
+    color: dimgray;
+    font-size: 1.5em;
+}
+
+.thumbnail{
+    
+    height: 50px !important;
+}
+
+.formulario-pedido{
+  margin-top: 90px;
+}
+
+
+#carrito{
+  border: none;
+  background-color: #ffb11f;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+#cart-icon{
+  height: 35px;
+  width: 35px;
+}
+
+#cart-count{
+  color: #000000;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  font-size: 14px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}

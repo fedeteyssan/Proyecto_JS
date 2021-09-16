@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link al CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Formulario de datos</title>
+  </head>
+
+  <body>
+
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+      <div class="container-fluid">
+
+        <!--Hamburguer button-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Logo Image-->
+        <img src="Multimedia/Logo Wica.jpg" alt="Isotipo marca" title="Isotipo Somos Wica" class="logo" loading="lazy">
+
+        <!--Menu-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" title="Página principal">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Nosotros" title="Pesentación: quienes somos">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Productos" title="Cards de los productos ">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Donde-comprar" title="Mapa con los puntos de venta">PUNTOS DE VENTA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contacto" title="Redes sociales de contacto">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <button id="carrito">
+        <img src="/Multimedia/bag.png" alt="Carrito" id="cart-icon">
+        <span id="cart-count">0</span>
+      </button>
+     
+
+    </nav>
+
+    <div class="container formulario-pedido">
+      <div class="row">
+        <form class="col-md-8"> 
+          <div class="d-flex">
+            <div class="col-md-6 me-3">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="ejemplo@gmail.com">
+            </div>
+            <div class="col-md-2">
+              <label for="inputPassword">Contraseña</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+            </div>
+          </div>
+        
+          <div class="d-flex">
+            <div class="col-md-6 me-2">
+              <label for="inputStreet">Calle</label>
+              <input type="text" class="form-control" id="inputStreet" placeholder="Quesada">
+            </div>
+            <div class="col-md-1 me-2">
+              <label for="inputNumber">Número</label>
+              <input type="text" class="form-control" id="inputNumber" placeholder="1529">
+            </div>
+            <div class="col-md-1">
+              <label for="inputFloor">Piso</label>
+              <input type="text" class="form-control" id="inputFloor" placeholder="4D">
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="col-md-4 me-2">
+              <label for="inputCity">Ciudad</label>
+              <input type="text" class="form-control" id="inputCity" placeholder="Ciudad de Buenos Aires">
+            </div>
+            <div class="col-md-2 me-2">
+              <label for="inputState">Provincia</label>
+              <select id="inputState" class="form-control">
+                <option selected>Seleccione...</option>
+                <option>Ciudad de Buenos Aires</option>
+                <option>Buenos Aires</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip">Código Postal</label>
+              <input type="text" class="form-control" id="inputZip" placeholder="1429">
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary mt-5 mb-5">Finalizar compra</button>
+        </form>
+
+        <aside class="col-md-4">
+          <h2>Tu pedido</h2>
+          <!-- Elementos del pedido -->
+          <ul id="pedido" class="list-group"></ul>
+          <hr>
+          <!-- Precio total -->
+          <p class="text-right">Total: &dollar;<span id="total"></span></p>
+        </aside>
+      </div>
+    </div>
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script src="index.js"></script>
+  </body>
+</html>
