@@ -10,7 +10,6 @@ class Usuario{
 }
 
 class Carrito{
-
     constructor(pId, pUsuario){
         this.pId = pId;
         this.usuario = pUsuario;
@@ -46,10 +45,7 @@ $.getJSON(URLJSON, function (respuesta, estado) {
 
 
 /*Método ready() de jQuery se emplea para detectar que el DOM está listo para usarse*/
-$( document ).ready(function() 
-{
-   console.log( "El DOM esta listo" );
-});
+$( document ).ready(function() {console.log( "El DOM esta listo" );});
 
 /*Defino un objeto carritoActual con un ID y nombre de prueba*/  
 let carritoActual = new Carrito(1, "Prueba");
@@ -58,20 +54,23 @@ let contador=0;
 /*Evento de los botones "agregar al carrito", invocando la función de cargar */
 $(".btn-agregar").click(function(){
 
+    /*Tomo la cantidad del input y la guardo en un contador para después mostrarlo en el carrito */
     let quantity = $(this).parent().children(".input-cant").val();
     contador+= parseInt(quantity);
     $("#cart-count").text(contador).animate({ backgroundColor: "green",color:"white" }).animate({ backgroundColor: "#ffb11f", color:"black"});
+    /*Cargo el carrito: busco el título de la imagen del produto que se agregó, que coincida con el nombre de un producto en el array catálogo */
     const itemName = $(this).parent().children("img")[0].title;
     const item = catalogo.find(element => element.nombre == itemName);
     cargarCarrito(quantity,item);
+    /*Reseteo el valor de los inputs a 0*/
     let inputs = $(".input-cant");
     for(i=0;i<inputs.length;i++){inputs[i].value=0}
 })
 
+
 /*Función para cargar el carrito con los productos (en cada posición del array voy a tener un array que contiene una cantidad 
 y un producto seleccionado), incluye el llamado a la función de guardado del carrito con formato JSON*/
 const cargarCarrito = (quantity,item) => {
-    let cont=0;
     if(quantity>0){
         for(let i = 0; i<carritoActual.productos.length; i++){
             if(item == carritoActual.productos[i][1]){
@@ -88,9 +87,10 @@ const guardarCarrito = (clave, valor) => {
     localStorage.setItem(clave, valor);
 }
 
-/*Función para mostrar el pedido del carrito, calculando el precio y guardándolo en JSON */
+/*Evento al hacer click en el carrito */
 $("#carrito").click(() => mostrarPedido(carritoActual));
 
+/*Función para mostrar el pedido del carrito, calculando el precio y guardándolo en JSON */
 const mostrarPedido = (cart)=> {
     
     guardarCarrito("carritoGuardado", JSON.stringify(cart));
@@ -118,6 +118,7 @@ const mostrarPedido = (cart)=> {
                 cart.productos.splice(i,1);	
             }
         }
+        /*Elimino el producto del renderizado y resto la cantidad que muestra el carrito */
         $(this).parent().remove();
         contador=contador-cantEliminada;
         $("#cart-count").text(contador).animate({ backgroundColor: "red",color:"white" }).animate({ backgroundColor: "#ffb11f", color:"black"});
@@ -140,7 +141,7 @@ const mostrarPedido = (cart)=> {
 }
 
 /*Al cargar la página con el formulario, se accede al carritoGuardado y se lo transforma de nuevo a objeto"*/
-$("#formulario").ready(function(){
+$("formDatos.html").ready(function(){
 
     const pedido=JSON.parse(localStorage.getItem("carritoGuardado"));
     for (const [quantity,items] of pedido.productos){
