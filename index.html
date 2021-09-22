@@ -1,98 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Link al CSS-->
+    <meta name="description" content="Medallones veganos 100% naturales, ricos y saludables, sin conservantes, sin TACC y libres de gluten">
+    
+    <meta name="keywords" content="Medallon vegano, hamburguesa vegana, hamburguesa vegetariana, veggie burger, productos veganos, hamburguesa plant based, hamburguesa a base de plantas, hamburguesa de lentejas, medallon de lentejas, hamburguesa de garbanzos, medallon de garbanzos, hamburguesa de poroto negro, medallon de poroto negro, hamburguesa de poroto rojo, medallon de poroto rojo">
+    
+    <meta property="og:title" content="Somos Wica - Medallones veganos 100% naturales">
+    <meta property="og:description" content=" Alimentos ricos y saludables, sin tacc y libres de gluten">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../Multimedia/Banner1.jpg">
+    <meta property="og:image:width" content="200px">
+    <meta property="og:image:height" content="200px">
+    <meta property="og:url" content="https://somos-wica.000webhostapp.com/">
+    <meta property="og:author" content="Federico Teyssandier">
+    <meta property="og:locale" content="en_ES">
+    
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+     <!--Link a fuente de google-->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Tenor+Sans&display=swap" rel="stylesheet">
 
-    <title>Tercer Entrega</title>
-</head>
+     <!--Link CDN a efectos AOS-->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<body>
+     <!--Link a favicon en titulo-->
+     <link rel="icon" type="image/png" sizes="32x32" href="Multimedia/favicon-32x32.png">
 
+    <title>Somos Wica - Medallones veganos 100% naturales </title>
+  </head>
+
+  <body>
     <!--NAVIGATION BAR-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
-        <div class="container-fluid">
-  
-          <!--Hamburguer button-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <!--Logo Image-->
-          <img src="Multimedia/Logo Wica.jpg" alt="Isotipo marca" title="Isotipo Somos Wica" class="logo" loading="lazy">
-  
-          <!--Menu-->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav w-100 justify-content-lg-center">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html" title="Página principal">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Nosotros" title="Pesentación: quienes somos">NOSOTROS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Productos" title="Cards de los productos ">PRODUCTOS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Donde-comprar" title="Mapa con los puntos de venta">PUNTOS DE VENTA</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Contacto" title="Redes sociales de contacto">CONTACTO</a>
-              </li>
-            </ul>
-          </div>
-          <button id="carrito" class="me-1">
+      <div class="container-fluid">
+        
+        <!--Hamburguer button-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Logo Image-->
+        <img src="Multimedia/Logo Wica.jpg" alt="Isotipo marca" title="Isotipo Somos Wica" class="logo" loading="lazy">
+
+        <!--Menu-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" title="Página principal">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Nosotros" title="Pesentación: quienes somos">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Productos" title="Cards de los productos ">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Donde-comprar" title="Mapa con los puntos de venta">PUNTOS DE VENTA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contacto" title="Redes sociales de contacto">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+        <button id="carrito" class="me-1">
             <img src="Multimedia/bag.png" alt="Carrito" id="cart-icon">
             <span id="cart-count">0</span>
-          </button>
-        </div>
+        </button>
+      </div>
     </nav>
-  
-    
+
+    <!--WHATSAPP CONTACT-->
+    <a href="http://wa.link/pwf6bi" title="Link a whatsapp empresarial">
+      <img src="Multimedia/whatsapp.jpg" alt="Icono whatsapp" title="Contacto Whatsapp" class="whatsapp" loading="lazy">
+    </a> 
+
     <!--PRODUCTOS-->
     <section id="Productos" class="container-fluid d-flex flex-column align-items-center justify-content-evenly">
         <h2>Nuestros medallones veganos</h2>
-  
+
         <div>
             <div class="card-clásica">
                 <img src="Multimedia/Clasica.jpg" alt="Medallón de poroto rojo con cebolla caramelizada" title="Wica Clásica" loading="lazy">
                 <p>Clásica: Poroto rojo con cebolla caramelizada</p>
-                <input class="input-cant" type="number" step="1" value="0" min="0">
-                <button class="btn-agregar">Agregar al carrito</button>
+                <div class="d-flex flex-row align-center justify-content-center">
+                  <input class="input-cant me-2" type="number" step="1" value="0" min="0">
+                  <button class="btn-agregar">Agregar al carrito</button>
+                </div>
             </div>
-           
+       
             <div class="card-gourmet">
                 <img src="Multimedia/Gourmet.jpg" alt="Medallón de garbanzos con tomates al romero" title="Wica Gourmet" loading="lazy">
                 <p>Gourmet: Garbanzos con tomates al romero</p>
-                <input class="input-cant" type="number" step="1" value="0" min="0">
-                <button class="btn-agregar">Agregar al carrito</button>
+                <div class="d-flex flex-row align-center justify-content-center">
+                  <input class="input-cant me-2" type="number" step="1" value="0" min="0">
+                  <button class="btn-agregar">Agregar al carrito</button>
+                </div>
             </div>     
-            
+        
             <div class="card-diabla">
                 <img src="Multimedia/Diabla.jpg" alt="Medallón de poroto negro con morrón rojo y verde" title="Wica Diabla" loading="lazy">    
                 <p>Diabla: Poroto negro con morrón rojo y verde</p>
-                <input class="input-cant" type="number" step="1" value="0" min="0">
-                <button class="btn-agregar">Agregar al carrito</button>
+                <div class="d-flex flex-row align-center justify-content-center">
+                  <input class="input-cant me-2" type="number" step="1" value="0" min="0">
+                  <button class="btn-agregar">Agregar al carrito</button>
+                </div>
             </div>
-  
+
             <div class="card-turca">
                 <img src="Multimedia/Turca.jpg" alt="Medallón de lenteja turca con zapallo, zanahoria y curry" title="Wica Turca" loading="lazy">    
                 <p>Turca: Lenteja turca con zapallo, zanahoria y curry</p>
-                <input class="input-cant" type="number" step="1" value="0" min="0">
-                <button class="btn-agregar">Agregar al carrito</button> 
+                <div class="d-flex flex-row align-center justify-content-center">
+                  <input class="input-cant me-2" type="number" step="1" value="0" min="0">
+                  <button class="btn-agregar">Agregar al carrito</button>
+                </div>
             </div>
-        </div>      
+        </div>
     </section>
-
+    
     <div id="resumen">
-    </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
 
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -104,7 +154,6 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/i18n/jquery-ui-i18n.min.js"></script>
-    
 
-</body>
+  </body>
 </html>

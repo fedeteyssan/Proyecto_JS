@@ -54,53 +54,53 @@
 
     <div class="container formulario-pedido">
       <div class="row">
-        <form class="col-md-8"> 
+        <form class="col-md-8" action="checkout.html"> 
           <div class="d-flex">
             <div class="col-md-4 me-3">
               <label for="inputName">Nombre</label>
-              <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+              <input type="text" class="form-control" id="inputName" placeholder="Nombre" required>
             </div>
             <div class="col-md-4">
               <label for="inputEmail">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="email@email.com">
+              <input type="email" class="form-control" id="inputEmail" placeholder="email@email.com" required>
             </div>
           </div>
         
           <div class="d-flex">
             <div class="col-md-6 me-2">
               <label for="inputStreet">Calle</label>
-              <input type="text" class="form-control" id="inputStreet" placeholder="Quesada">
+              <input type="text" class="form-control" id="inputStreet" placeholder="Calle" required>
             </div>
             <div class="col-md-1 me-2">
               <label for="inputNumber">Número</label>
-              <input type="text" class="form-control" id="inputNumber" placeholder="1529">
+              <input type="text" class="form-control" id="inputNumber" placeholder="xxx" required>
             </div>
             <div class="col-md-1">
               <label for="inputFloor">Piso</label>
-              <input type="text" class="form-control" id="inputFloor" placeholder="4D">
+              <input type="text" class="form-control" id="inputFloor" placeholder="xx" optional>
             </div>
           </div>
 
           <div class="d-flex">
             <div class="col-md-4 me-2">
               <label for="inputCity">Ciudad</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="Ciudad de Buenos Aires">
+              <input type="text" class="form-control" id="inputCity" placeholder="Ciudad" required>
             </div>
             <div class="col-md-2 me-2">
               <label for="inputState">Provincia</label>
-              <select id="inputState" class="form-control">
-                <option selected>Seleccione...</option>
-                <option>Ciudad de Buenos Aires</option>
+              <select id="inputState" class="form-control" required>
+                <option value="" selected>Seleccione...</option>
+                <option >Ciudad de Buenos Aires</option>
                 <option>Buenos Aires</option>
               </select>
             </div>
             <div class="col-md-2">
               <label for="inputZip">Código Postal</label>
-              <input type="text" class="form-control" id="inputZip" placeholder="1429">
+              <input type="text" class="form-control" id="inputZip" placeholder="xxxx" required>
             </div>
           </div>
           
-          <button type="submit" class="btn btn-primary mt-5 mb-5">Finalizar compra</button>
+          <button type="submit" id="finalizar-compra" class="btn btn-primary mt-5 mb-5">Finalizar compra</button>
         </form>
 
         <aside class="col-md-4">

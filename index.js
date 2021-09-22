@@ -1,18 +1,17 @@
 
 /*Clases constructoras de los objetos usuario y carrito */
 class Usuario{
-    constructor(pId, pNombre, pMail, pDireccion){
+    constructor(pId, pNombre, pEmail, pDireccion){
         this.id = pId;
         this.nombre = pNombre;
-        this.mail = pMail;
+        this.email = pEmail;
         this.direccion = pDireccion;
     }
 }
 
 class Carrito{
-    constructor(pId, pUsuario){
-        this.pId = pId;
-        this.usuario = pUsuario;
+    constructor(pId){
+        this.id = pId;
         this.productos = [];
     }
 
@@ -47,8 +46,9 @@ $.getJSON(URLJSON, function (respuesta, estado) {
 /*Método ready() de jQuery se emplea para detectar que el DOM está listo para usarse*/
 $( document ).ready(function() {console.log( "El DOM esta listo" );});
 
-/*Defino un objeto carritoActual con un ID y nombre de prueba*/  
-let carritoActual = new Carrito(1, "Prueba");
+/*Defino un objeto carritoActual con sus ID*/  
+
+let carritoActual = new Carrito(1);
 let contador=0;
 
 /*Evento de los botones "agregar al carrito", invocando la función de cargar */
@@ -59,7 +59,7 @@ $(".btn-agregar").click(function(){
     contador+= parseInt(quantity);
     $("#cart-count").text(contador).animate({ backgroundColor: "green",color:"white" }).animate({ backgroundColor: "#ffb11f", color:"black"});
     /*Cargo el carrito: busco el título de la imagen del produto que se agregó, que coincida con el nombre de un producto en el array catálogo */
-    const itemName = $(this).parent().children("img")[0].title;
+    const itemName = $(this).parent().parent().children("img")[0].title;
     const item = catalogo.find(element => element.nombre == itemName);
     cargarCarrito(quantity,item);
     /*Reseteo el valor de los inputs a 0*/
@@ -83,7 +83,7 @@ const cargarCarrito = (quantity,item) => {
 }
 
 /*Función para guardar un carrito en el local storage*/
-const guardarCarrito = (clave, valor) => {
+const guardarPedido = (clave, valor) => {
     localStorage.setItem(clave, valor);
 }
 
@@ -93,7 +93,7 @@ $("#carrito").click(() => mostrarPedido(carritoActual));
 /*Función para mostrar el pedido del carrito, calculando el precio y guardándolo en JSON */
 const mostrarPedido = (cart)=> {
     
-    guardarCarrito("carritoGuardado", JSON.stringify(cart));
+    guardarPedido("carritoGuardado", JSON.stringify(cart));
         
     precioTotal=0;
     cart.calcularPrecioTotal();
@@ -125,13 +125,13 @@ const mostrarPedido = (cart)=> {
 
         precioTotal=0;	
         cart.calcularPrecioTotal(); 
-        guardarCarrito("carritoGuardado", JSON.stringify(cart));
+        guardarPedido("carritoGuardado", JSON.stringify(cart));
             
         $("b").text(`Valor total a pagar: $ ${precioTotal}`);
     }); 
     
     /*Animación para centrar y mostrar/ocultar el pedido al hacer click en el botón*/
-    $("#resumen").css("top","25%").slideToggle();   
+    $("#resumen").slideToggle();   
         
     /*Animación para cerrar el pedido al querer cambiar la cantidad de algún producto*/
     $("input").click(function(){$("#resumen").hide()});
@@ -140,15 +140,31 @@ const mostrarPedido = (cart)=> {
     $(".btn-secondary").click(function(){$("#resumen").hide()});   
 }
 
+/*Evento para cerrar el menu automáticamente en mobile*/
+$('.navbar-nav>li>a').click(function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+
 /*Al cargar la página con el formulario, se accede al carritoGuardado y se lo transforma de nuevo a objeto"*/
 $("formDatos.html").ready(function(){
-
-    const pedido=JSON.parse(localStorage.getItem("carritoGuardado"));
-    for (const [quantity,items] of pedido.productos){
+    pedidoActual=JSON.parse(localStorage.getItem("carritoGuardado"));
+    for (const [quantity,items] of pedidoActual.productos){
         $("#pedido").append(`<li class="items-carrito"> <img src= ${items.imagen} class="thumbnail"> </img> <p class="linea-producto"> ${items.nombre} </p> <p>Cantidad: ${quantity}</p> <p>Precio: $ ${items.precio*quantity}</p>  </li>`);
         precioTotal += items.precio*quantity;
-        
     }
-    
     $("#total").text(`${precioTotal}`)
+});
+
+
+
+$("form").submit(function() {
+  
+    pNombre=$("#inputName").val();
+    pEmail=$("#inputEmail").val();
+    pDireccion=$("#inputStreet").val()+" "+$("#inputNumber").val()+" "+$("#inputFloor").val()+", "
+    +$("#inputCity").val()+", "+$("#inputState").val()+" ("+$("#inputZip").val()+")";
+
+    pedidoActual.usuario= new Usuario(1,pNombre,pEmail,pDireccion);;
+    guardarPedido("pedidoGuardado", JSON.stringify(pedidoActual));
 });
