@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        <!--Link CDN a efectos AOS-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!--Link a favicon en titulo-->
+        <link rel="icon" type="image/png" sizes="32x32" href="Multimedia/favicon-32x32.png">
+    
+        <title>Wica Turca - Medallón de lenteja turca con zapallo, zanahoria y curry</title>
+
+    </head>
+
+    <body>
+
+        <!--NAVIGATION BAR-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+            <div class="container-fluid">
+          
+                <!--Hamburguer button-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+  
+                <!--Logo Image-->
+                <img src="Multimedia/Logo Wica.jpg" alt="Isotipo marca" title="Isotipo Somos Wica" class="logo" loading="lazy">
+  
+                <!--Menu-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav w-100 justify-content-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" title="Página principal">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#Nosotros" title="Presentación: quienes somos">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#Productos" title="Cards de los productos">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#Donde-comprar" title="Mapa con puntos de venta">PUNTOS DE VENTA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contacto" title="Redes sociales de contacto">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+                <button id="carrito" class="me-1">
+                    <img src="Multimedia/bag.png" alt="Carrito" id="cart-icon">
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+        
+
+        <!--WHATSAPP CONTACT-->
+        <a href="http://wa.link/pwf6bi">
+            <img src="Multimedia/whatsapp.jpg" alt="" class="whatsapp" loading="lazy">
+        </a> 
+  
+        <div class="container-fluid w-100 banner banner-4">
+            <h1>
+                WICA TURCA
+            </h1>
+        </div>
+        
+        <!--Product introduction-->
+        <div class="container-fluid presentacion w-100">
+
+            <!--Images Gallery-->
+            <div class="d-flex align-items-center">
+                <div class="small-img">
+                    <img src="Multimedia/Turca.jpg" alt="Medallón de lenteja turca con zanahoria y zapallo " title="Wica turca" loading="lazy" onclick="myFunction(this)">
+                    <img src="Multimedia/Turca1.jpg" alt="Medallón de lenteja turca con zanahoria y zapallo al plato" title="Wica turca al plato" onclick="myFunction(this)">
+                    <img src="Multimedia/Turca2.jpg" alt="Medallón de lenteja turca con zanahoria y zapallo a la parrilla" title="Wica turca a la parrilla" onclick="myFunction(this)">
+                    <img src="Multimedia/Turca3.jpg" alt="Medallón de lenteja turca con zanahoria y zapallo al plato con ensalada" title="Wica turca al plato con ensalada" onclick="myFunction(this)">
+                    <img src="Multimedia/Turca4.jpg" alt="Medallón de lenteja turca con zanahoria y zapallo en roll" title="Wica turca en roll" onclick="myFunction(this)">
+                </div>
+  
+                <div class="img-container">
+                    <img id="imageBox" src="Multimedia/Turca.jpg" alt="Medallón de lenteja turca con zanahoria y zapallo" title="Wica turca">
+                </div>
+            </div>
+  
+            <script>
+                function myFunction(smallImg){
+                    var fullImg = document.getElementById("imageBox");
+                    fullImg.src = smallImg.src;
+                }
+            </script>
+  
+            <!--Ingredients-->
+            <div class=" lista-ingredientes lista-4" data-aos="fade-left">
+                <h3>Ingredientes:</h3>
+                <p>
+                    Lenteja turca, zanahoria, zapallo, harina de <br>maiz, fécula de mandioca, curry y sal.<br>
+                    <i>Producto vegano, fuente de fibra, con ingredientes 100% naturales <br>y sin TACC, conservantes ni colorantes.</i>
+                </p>
+            </div>
+        </div>
+
+
+        <!--OTROS PRODUCTOS-->
+        <section class="container-fluid d-flex flex-column align-items-center other-products" data-aos="fade-up">
+            <h3>Más variedades</h3>
+
+            <div class="container m-5">
+            
+                <div class="card-clásica">
+                    <img src="Multimedia/Clasica.jpg" alt="Medallón de poroto rojo con cebolla caramelizada" title="Wica Clásica" loading="lazy" data-aos="flip-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+                    <p>Clásica: Poroto rojo con cebolla caramelizada</p>
+                    <button>
+                    <a href="Clasica.html" target="_blank" title="Página de descripción de producto Wica Clásica">Conocé más</a>
+                    </button>
+                </div>
+          
+                <div class="card-gourmet">
+                    <img src="Multimedia/Gourmet.jpg" alt="Medallón de garbanzos con tomates al romero" title="Wica Gourmet" loading="lazy" data-aos="flip-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic">
+                    <p>Gourmet: Garbanzos con tomates al romero</p>
+                    <button>
+                      <a href="Gourmet.html" target="_blank" title="Página de descripción de producto Wica Gourmet">Conocé más</a>
+                    </button>
+                </div>     
+                      
+                <div class="card-diabla">
+                    <img src="Multimedia/Diabla.jpg" alt="Medallón de poroto negro con morrón rojo y verde" title="Wica Diabla" loading="lazy" data-aos="flip-right" data-aos-duration="3000" data-aos-easing="ease-out-cubic">    
+                    <p>Diabla: Poroto negro con morrón rojo y verde</p>
+                    <button>
+                      <a href="Diabla.html" target="_blank" title="Página de descripción de producto Wica Diabla">Conocé más</a>
+                    </button>  
+                </div> 
+            </div>          
+        </section>
+
+        <!--FOOTER-->
+        <footer id="Contacto" class="d-flex flex-column align-items-center w-100" data-aos="fade-up">
+            <img src="Multimedia/Footer1.jpg" alt="Logotipo marca" title="Logotipo Somos Wica" class="ig-cta">
+  
+            <div class="d-flex justify-content-center mb-3 ig-gallery">
+                <a href="https://www.instagram.com/p/CEaSlgep1d4/?utm_source=ig_web_copy_link" target="blank" title="Link a posteo IG">
+                    <img src="Multimedia/footer2.jpg" alt="Medallones veganos al plato con ensalada" title="Wicas al plato con ensalada" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/p/CMpUk_PLc0R/?utm_source=ig_web_copy_link" target="blank" title="Link a posteo IG">
+                    <img src="Multimedia/footer3.jpg" alt="Hamburguesa vegana en pan" title="Wica en pan" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/p/CGIKcrCJ0Bf/?utm_source=ig_web_copy_link" target="blank" title="Link a posteo IG">
+                    <img src="Multimedia/footer4.jpg" alt="Medallones veganos apilados" title="Wica cortada y apilada" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/p/CO09P3jNTYh/?utm_source=ig_web_copy_link" target="blank" title="Link a posteo IG">
+                    <img src="Multimedia/footer5.jpg" alt="Hamburguesa vegana en pan de remolacha" title="Wica en pan de remolacha" loading="lazy">
+                </a>
+            </div>
+  
+  
+            <div class="row w-100 footer-box">
+                <div class="col-4 d-flex justify-content-evenly">
+                    <img src="Multimedia/Logo Wica.jpg" alt="Isotipo marca" title="Isotipo Somos Wica" class="logo-final" loading="lazy">
+                    <img src="Multimedia/100natural.jpg" alt="Isotipo 100% natural" title="100% natural" class="certificacion" loading="lazy">
+                    <img src="Multimedia/Sin Tacc.jpg" alt="Isotipo sin TACC" title="Sin TACC" class="logo-final" loading="lazy"> 
+                </div>
+  
+                <div class="col-4">
+                    <ul>
+                        <li>
+                            <a href="index.html" title="Página principal">HOME </a>
+                        </li>
+                        <li>
+                            <a href="#Nosotros" title="Presentación: quienes somos">NOSOTROS</a>
+                        </li>
+                        <li>
+                            <a href="#Productos" title="Cards de productos">PRODUCTOS</a>
+                        </li>
+                        <li>
+                            <a href="#Donde-comprar" title="Mapa con puntos de venta">PUNTOS DE VENTA</a>
+                        </li>
+                    </ul>
+                </div>
+          
+                <div class="col-4 Redes">
+                    <p>Seguinos en nuestras redes:</p>
+                    <a href="https://www.instagram.com/somoswica/?hl=es-la" title="Link a Instagram">
+                        <img src="Multimedia/instagram.jpg" alt="Icono Instagram" title="Contacto Instagram" loading="lazy">
+                    </a>
+                    <a href="https://www.facebook.com/somoswica" title="Link a Facebook">
+                        <img src="Multimedia/facebook.jpg" alt="Icono Facebook" title="Contacto Facebook" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </footer>    
+  
+  
+      <!-- Optional JavaScript; choose one of the two! -->
+  
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+      <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+      -->
+      
+      <!--JQuery-->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      <!--link Javascript-->
+      <script src="index.js"></script>
+
+      <!-- Script para efectos AOS -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+            duration:1500,
+        });
+      </script>
+
+  
+    </body>
+</html>

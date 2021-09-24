@@ -16,7 +16,7 @@ class Carrito{
     }
 
     calcularPrecioTotal(){
-
+        precioTotal=0;
         for(let i = 0; i < this.productos.length; i++){
             precioTotal += this.productos[i][0] * this.productos[i][1].precio;
         }
@@ -54,19 +54,26 @@ let contador=0;
 /*Evento de los botones "agregar al carrito", invocando la función de cargar */
 $(".btn-agregar").click(function(){
 
-    /*Tomo la cantidad del input y la guardo en un contador para después mostrarlo en el carrito */
+    /*Tomo la cantidad del input y la guardo en un contador para mostrarlo en el carrito, luego lo guardo en el storage para trasladarlo de página */
     let quantity = $(this).parent().children(".input-cant").val();
     contador+= parseInt(quantity);
     $("#cart-count").text(contador).animate({ backgroundColor: "green",color:"white" }).animate({ backgroundColor: "#ffb11f", color:"black"});
+    guardarPedido("Unidades", contador);
+
     /*Cargo el carrito: busco el título de la imagen del produto que se agregó, que coincida con el nombre de un producto en el array catálogo */
-    const itemName = $(this).parent().parent().children("img")[0].title;
+    const itemName = $(this).parent().parent().children().children("img")[0].title;
     const item = catalogo.find(element => element.nombre == itemName);
     cargarCarrito(quantity,item);
+    guardarPedido("pedidoGuardado", JSON.stringify(carritoActual));
+    carritoActual.calcularPrecioTotal();
+
     /*Reseteo el valor de los inputs a 0*/
     let inputs = $(".input-cant");
     for(i=0;i<inputs.length;i++){inputs[i].value=0}
 })
 
+/*Llamo a la cantidad guardada para mostrarse en el carrito siempre */
+$("#cart-count").text(JSON.parse(sessionStorage.getItem("Unidades")));
 
 /*Función para cargar el carrito con los productos (en cada posición del array voy a tener un array que contiene una cantidad 
 y un producto seleccionado), incluye el llamado a la función de guardado del carrito con formato JSON*/
@@ -82,9 +89,9 @@ const cargarCarrito = (quantity,item) => {
     }
 }
 
-/*Función para guardar un carrito en el local storage*/
+/*Función para guardar un carrito en el session storage*/
 const guardarPedido = (clave, valor) => {
-    localStorage.setItem(clave, valor);
+    sessionStorage.setItem(clave, valor);
 }
 
 /*Evento al hacer click en el carrito */
@@ -93,11 +100,6 @@ $("#carrito").click(() => mostrarPedido(carritoActual));
 /*Función para mostrar el pedido del carrito, calculando el precio y guardándolo en JSON */
 const mostrarPedido = (cart)=> {
     
-    guardarPedido("carritoGuardado", JSON.stringify(cart));
-        
-    precioTotal=0;
-    cart.calcularPrecioTotal();
-        
     /*Modifico el DOM mediante JS para crear un div resumen con un h3, al que le agrego otro div con el pedido y un b con su valor*/
     $("#resumen").empty().append(`<h3 class="text-center">Tu pedido es: </h3>`);
 
@@ -123,9 +125,10 @@ const mostrarPedido = (cart)=> {
         contador=contador-cantEliminada;
         $("#cart-count").text(contador).animate({ backgroundColor: "red",color:"white" }).animate({ backgroundColor: "#ffb11f", color:"black"});
 
-        precioTotal=0;	
+        guardarPedido("Unidades", contador);
+        guardarPedido("pedidoGuardado", JSON.stringify(cart));
         cart.calcularPrecioTotal(); 
-        guardarPedido("carritoGuardado", JSON.stringify(cart));
+        
             
         $("b").text(`Valor total a pagar: $ ${precioTotal}`);
     }); 
@@ -145,10 +148,11 @@ $('.navbar-nav>li>a').click(function(){
     $('.navbar-collapse').collapse('hide');
 });
 
+let pedidoActual={};
 
-/*Al cargar la página con el formulario, se accede al carritoGuardado y se lo transforma de nuevo a objeto"*/
+/*Al cargar la página con el formulario, se accede al pedidoGuardado y se lo transforma de nuevo a objeto"*/
 $("formDatos.html").ready(function(){
-    pedidoActual=JSON.parse(localStorage.getItem("carritoGuardado"));
+    pedidoActual=JSON.parse(sessionStorage.getItem("pedidoGuardado"));
     for (const [quantity,items] of pedidoActual.productos){
         $("#pedido").append(`<li class="items-carrito"> <img src= ${items.imagen} class="thumbnail"> </img> <p class="linea-producto"> ${items.nombre} </p> <p>Cantidad: ${quantity}</p> <p>Precio: $ ${items.precio*quantity}</p>  </li>`);
         precioTotal += items.precio*quantity;
@@ -156,15 +160,14 @@ $("formDatos.html").ready(function(){
     $("#total").text(`${precioTotal}`)
 });
 
-
-
+/*Al hacer submit con todos los campos completos, se crea el objeto usuario y se añade al carrito*/
 $("form").submit(function() {
-  
     pNombre=$("#inputName").val();
     pEmail=$("#inputEmail").val();
     pDireccion=$("#inputStreet").val()+" "+$("#inputNumber").val()+" "+$("#inputFloor").val()+", "
     +$("#inputCity").val()+", "+$("#inputState").val()+" ("+$("#inputZip").val()+")";
+    
 
-    pedidoActual.usuario= new Usuario(1,pNombre,pEmail,pDireccion);;
+    pedidoActual.usuario= new Usuario(1,pNombre,pEmail,pDireccion);
     guardarPedido("pedidoGuardado", JSON.stringify(pedidoActual));
 });
