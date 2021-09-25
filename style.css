@@ -746,8 +746,6 @@ button{
   opacity: 1;
 }
 
-
-
 #resumen{
     display: none;
     flex-wrap: wrap;
@@ -757,7 +755,7 @@ button{
     border: solid orange;
     width: 50%;
     position: absolute;
-    top:20%;
+    top:250%;
     z-index: 1;
 }
 
@@ -803,11 +801,11 @@ b{
     height: 50px !important;
 }
 
-.formulario-pedido{
+.datos{
   margin-top: 90px;
 }
 
-.formulario-pedido input{
+.datos input{
   border: 1px solid #ffb11f;
 }
 
@@ -978,4 +976,109 @@ b{
   transition-delay: 0.2s;
 }
 
+/*Agregado checkout*/
 
+:root {
+  --black: #525252;
+  --orange: #FFB000;
+  --white: #F7FBFC;
+  --grey: #C2C2C2;
+}
+
+.checkout{
+  display: none;
+  margin-top: 100px;
+  margin-left: 130px !important
+}
+
+.card {
+  width: 20rem;
+  height: 11rem;
+  background-color: var(--white);
+  border-radius: 0.7rem;
+  padding: 1.3rem 1.6rem;
+  position: absolute;
+  top: -2.75rem;
+  right: 4.4rem;
+}
+.card:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 11rem;
+  background-color: #2A2A2A;
+  border-radius: 0.7rem;
+  position: absolute;
+  top: 2.7rem;
+  right: -1.5rem;
+  transform: rotate(8deg);
+  z-index: -1;
+}
+
+.chip {
+  width: 3rem;
+  height: 2.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.checkout form {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  font-size: 0.55rem;
+  color: #C2C2C2;
+}
+
+.checkout form label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.55rem;
+  color: #C2C2C2;
+  margin-top: 0.35rem;
+}
+
+.checkout form label[for=number] {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout form label[for=name] {
+  width: 72%;
+}
+.checkout form label[for=date] {
+  width: 22%;
+  margin-left: 6%;
+}
+.checkout form label[for=cvc] {
+  width: 16%;
+  position: absolute;
+  right: 7%;
+  bottom: -3.9rem;
+}
+
+.checkout form input {
+  border: none;
+  border-bottom: 1px solid var(--grey);
+  outline: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  padding: 0.2rem 0;
+}
+.checkout form input#cvc {
+  color: white;
+}
+
+.checkout #number{
+  width: 50px;
+  text-align: center;
+}
+
+.checkout input[type='number']::-webkit-inner-spin-button, .checkout input[type='number']::-webkit-outer-spin-button { 
+  opacity: 0;
+}
+
+#btn-finalizar-compra{
+  position: absolute;
+  top:150%
+}

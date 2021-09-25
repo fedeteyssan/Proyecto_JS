@@ -80,10 +80,81 @@
       </div>
     </nav>
 
+    <!--BANNER CAROUSEL-->
+    <div id="my-carousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      
+      <!--Indicators-->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#my-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#my-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#my-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!--Banner images-->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="#Nosotros">
+            <picture alt="Hamburguesas veganas con pan" title="Wicas con pan">
+              <source media="(max-width: 767px)" srcset="Multimedia/Mobile1.jpg" loading="lazy" class="d-block">
+              <source media="(min-width: 768px)" srcset="Multimedia/Banner1.jpg" loading="lazy" class="d-block">
+              <img src="Multimedia/Banner1.jpg" class="d-block w-100" alt="Hamburguesas veganas con pan" title="Wicas con pan">
+            </picture>
+          </a>
+          
+        </div>
+
+        <div class="carousel-item">
+          <a href="#Nosotros">
+            <picture alt="Hamburguesas vegana en mano" title="Wica en mano">
+              <source media="(max-width: 767px)" srcset="Multimedia/Mobile2.jpg" loading="lazy" class="d-block">
+              <source media="(min-width: 768px)" srcset="Multimedia/Banner2.jpg" loading="lazy" class="d-block">
+              <img src="Multimedia/Banner2.jpg" class="d-block w-100" alt="Hamburguesa vegana en mano" title="Wica en mano">
+            </picture>
+          </a>
+          
+        </div>
+
+        <div class="carousel-item">
+          <a href="#Nosotros">
+            <picture alt="Medallon vegano al plato" title="Wica al plato">
+              <source media="(max-width: 767px)" srcset="Multimedia/Mobile3.jpg" loading="lazy" class="d-block">
+              <source media="(min-width: 768px)" srcset="Multimedia/Banner3.jpg" loading="lazy" class="d-block">
+              <img src="Multimedia/Banner3.jpg" class="d-block w-100" alt="Medallon vegano al plato" title="Wica al plato">
+            </picture>
+          </a>
+        </div>
+      </div>
+
+      <!--Prev button-->
+      <button class="carousel-control-prev" type="button" data-bs-target="#my-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <!--Next button-->
+      <button class="carousel-control-next" type="button" data-bs-target="#my-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
     <!--WHATSAPP CONTACT-->
     <a href="http://wa.link/pwf6bi" title="Link a whatsapp empresarial">
       <img src="Multimedia/whatsapp.jpg" alt="Icono whatsapp" title="Contacto Whatsapp" class="whatsapp" loading="lazy">
     </a> 
+   
+    
+    <!--NOSOTROS-->
+    <section id="Nosotros" class="container-fluid d-flex flex-column align-items-center justify-content-evenly">
+        <p class="text-center" data-aos="zoom-in">
+          Somos una opción rica, práctica y<br>vegana para todas tus comidas.<br> 
+          Nuestras veggie burgers están hechas sólo con <br> ingredientes frescos de origen vegetal, <br>
+          libres de gluten, sin conservantes ni colorantes.<br> <br> <span> ¡Somos 100% naturales!
+          Nosotros ya nos sumamos al camino <br>de la alimentación saludable, ¿y vos?</span>
+        </p>
+        <video src="Multimedia/Somos-wica.mp4" controls title="Video presentación" data-aos="flip-up"></video>
+    </section>
 
     <!--PRODUCTOS-->
     <section id="Productos" class="container-fluid d-flex flex-column align-items-center justify-content-evenly">
@@ -150,6 +221,74 @@
     
     <div id="resumen"></div>
 
+    <!--DONDE COMPRAR-->
+    <section id="Donde-comprar" class="container-fluid d-flex flex-column align-items-center justify-content-evenly">
+
+      <h2> Donde encontrarnos</h2>
+
+      <div class="container-fluid d-flex justify-content-evenly">
+        <!--Google maps with POS-->
+        <iframe src="https://www.google.com/maps/d/embed?mid=1zhZmKTtrVmTXyrUyOr9L6TjRpCnQu7JU"
+        width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer id="Contacto" class="d-flex flex-column align-items-center w-100">
+      <img src="Multimedia/Footer1.jpg" alt="Logotipo marca" title="Logotipo Somos Wica" class="ig-cta" loading="lazy">
+
+      <div class="d-flex justify-content-center mb-3 ig-gallery">
+        <a href="https://www.instagram.com/p/CEaSlgep1d4/?utm_source=ig_web_copy_link" target="blank" title="Link a posteo IG">
+          <img src="Multimedia/footer2.jpg" alt="Medallones veganos al plato con ensalada" title="Wicas al plato con ensalada" loading="lazy" data-aos="zoom-in-up">
+        </a>
+        <a href="https://www.instagram.com/p/CMpUk_PLc0R/?utm_source=ig_web_copy_link" target="blank" title="Link a posteo IG">
+          <img src="Multimedia/footer3.jpg" alt="Hamburguesa vegana en pan" title="Wica en pan" loading="lazy" data-aos="zoom-in-up">
+        </a>
+        <a href="https://www.instagram.com/p/CGIKcrCJ0Bf/?utm_source=ig_web_copy_link" target="blank" title="Link a posteo IG">
+          <img src="Multimedia/footer4.jpg" alt="Medallones veganos apilados" title="Wica cortada y apilada" loading="lazy" data-aos="zoom-in-up">
+        </a>
+        <a href="https://www.instagram.com/p/CO09P3jNTYh/?utm_source=ig_web_copy_link" target="blank" title="Link a posteo IG">
+          <img src="Multimedia/footer5.jpg" alt="Hamburguesa vegana en pan de remolacha" title="Wica en pan de remolacha" loading="lazy" data-aos="zoom-in-up">
+        </a>
+      </div>
+
+      <div class="row w-100 footer-box">
+        <div class="col-4 d-flex justify-content-evenly">
+          <img src="Multimedia/Logo Wica.jpg" alt="Isotipo marca" title="Isotipo Somos Wica" class="logo-final" loading="lazy">
+          <img src="Multimedia/100natural.jpg" alt="Isotipo 100% natural" title="100% natural" class="certificacion" loading="lazy"> 
+          <img src="Multimedia/Sin Tacc.jpg" alt="Isotipo sin TACC" title="Sin TACC" class="logo-final" loading="lazy"> 
+        </div>
+
+        <div class="col-4">
+          <ul>
+            <li>
+              <a href="index.html" title="Página principal">HOME </a>
+            </li>
+            <li>
+              <a href="#Nosotros" title="Presentación: quienes somos">NOSOTROS</a>
+           </li>
+            <li>
+              <a href="#Productos" title="Cards de productos">PRODUCTOS</a>
+            </li>
+            <li>
+              <a href="#Donde-comprar" title="Mapa con puntos de venta">PUNTOS DE VENTA</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-4 Redes">
+          <p>Seguinos en nuestras redes:</p>
+          <a href="https://www.instagram.com/somoswica/?hl=es-la" title="Link a Instagram">
+            <img src="Multimedia/instagram.jpg" alt="Icono Instagram" title="Contacto Instagram" loading="lazy">
+          </a>
+          <a href="https://www.facebook.com/somoswica" title="Link a Facebook">
+            <img src="Multimedia/facebook.jpg" alt="Icono Facebook" title="Contacto Facebook" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </footer>    
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -173,6 +312,14 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/i18n/jquery-ui-i18n.min.js"></script>
+
+    <!-- Script para efectos AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          duration:1500,
+      });
+    </script>
 
   </body>
 </html>

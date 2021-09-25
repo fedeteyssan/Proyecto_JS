@@ -73,7 +73,7 @@ $(".btn-agregar").click(function(){
 })
 
 /*Llamo a la cantidad guardada para mostrarse en el carrito siempre */
-$("#cart-count").text(JSON.parse(sessionStorage.getItem("Unidades")));
+$("#cart-count").text(sessionStorage.getItem("Unidades"));
 
 /*Función para cargar el carrito con los productos (en cada posición del array voy a tener un array que contiene una cantidad 
 y un producto seleccionado), incluye el llamado a la función de guardado del carrito con formato JSON*/
@@ -132,6 +132,8 @@ const mostrarPedido = (cart)=> {
             
         $("b").text(`Valor total a pagar: $ ${precioTotal}`);
     }); 
+
+    
     
     /*Animación para centrar y mostrar/ocultar el pedido al hacer click en el botón*/
     $("#resumen").slideToggle();   
@@ -160,14 +162,29 @@ $("formDatos.html").ready(function(){
     $("#total").text(`${precioTotal}`)
 });
 
-/*Al hacer submit con todos los campos completos, se crea el objeto usuario y se añade al carrito*/
-$("form").submit(function() {
+/*Evento en boton proceder al pago, se crea el objeto usuario y se añade al carrito, y se despliega el formulario de pago*/
+$("form").first().submit(function(e) {
+    e.preventDefault();
     pNombre=$("#inputName").val();
     pEmail=$("#inputEmail").val();
     pDireccion=$("#inputStreet").val()+" "+$("#inputNumber").val()+" "+$("#inputFloor").val()+", "
     +$("#inputCity").val()+", "+$("#inputState").val()+" ("+$("#inputZip").val()+")";
     
-
     pedidoActual.usuario= new Usuario(1,pNombre,pEmail,pDireccion);
     guardarPedido("pedidoGuardado", JSON.stringify(pedidoActual));
+    
+    $(".checkout").show();
+});
+
+/*Evento en botón finalizar compra*/
+$(".checkout").submit(function(){
+    alert(`${pedidoActual.usuario.nombre} tu pedido ha sido confirmado, a recibir en ${pedidoActual.usuario.direccion}. Te enviamos el resumen y la factura a ${pedidoActual.usuario.email}, muchas gracias y que lo disfrutes!`)
+});
+
+/*Evento para limitar caracteres numéricos*/
+$(".inputNumero").on('keypress', function (e) {
+	var code = e.which ? e.which : e.keyCode;
+	if ((code !== 46 && code > 31 && (code < 48 || code > 57)) || (code === 46 && $(this).val().indexOf('.') > -1)) {
+		e.preventDefault();
+	}
 });
