@@ -732,6 +732,12 @@ footer .footer-box .Redes p {
   background-color: olive;
 }
 
+hr{
+  border: solid;
+  width: 75%;
+  color: orange;
+}
+
 /*Agregados de JS*/
 button{
     color: white;
