@@ -11,7 +11,7 @@
         "id":2,
         "nombre":"Wica Gourmet",
         "ingredienteBase":"Garbanzos con tomates al romero",
-        "precio":350,
+        "precio":300,
         "imagen":"Multimedia/Gourmet.jpg"
     },
 
@@ -19,7 +19,7 @@
         "id":3,
         "nombre":"Wica Diabla",
         "ingredienteBase":"Poroto negro con morrón rojo y verde",
-        "precio":400,
+        "precio":300,
         "imagen":"Multimedia/Diabla.jpg"
     },
 
@@ -27,7 +27,7 @@
         "id":4,
         "nombre":"Wica Turca",
         "ingredienteBase":"Lenteja turca con zapallo, zanahoria y curry",
-        "precio":450,
+        "precio":300,
         "imagen":"Multimedia/Turca.jpg"
     }
 ]

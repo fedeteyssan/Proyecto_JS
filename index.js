@@ -20,8 +20,6 @@ class Carrito{
         for(let i = 0; i < this.productos.length; i++){
             precioTotal += this.productos[i][0] * this.productos[i][1].precio;
         }
-
-        console.log("El monto total a pagar es de $ " + precioTotal);
     }
 }
 
@@ -44,7 +42,7 @@ $.getJSON(URLJSON, function (respuesta, estado) {
 
 
 /*Método ready() de jQuery se emplea para detectar que el DOM está listo para usarse*/
-$( document ).ready(function() {console.log( "El DOM esta listo" );});
+$( document ).ready(function() {});
 
 /*Defino un objeto carritoActual con sus ID*/  
 
@@ -58,7 +56,7 @@ $(".btn-agregar").click(function(){
     let quantity = $(this).parent().children(".input-cant").val();
     contador+= parseInt(quantity);
     $("#cart-count").text(contador).animate({ backgroundColor: "green",color:"white" }).animate({ backgroundColor: "#ffb11f", color:"black"});
-    guardarPedido("Unidades", contador);
+   
 
     /*Cargo el carrito: busco el título de la imagen del produto que se agregó, que coincida con el nombre de un producto en el array catálogo */
     const itemName = $(this).parent().parent().children().children("img")[0].title;
@@ -125,7 +123,7 @@ const mostrarPedido = (cart)=> {
         contador=contador-cantEliminada;
         $("#cart-count").text(contador).animate({ backgroundColor: "red",color:"white" }).animate({ backgroundColor: "#ffb11f", color:"black"});
 
-        guardarPedido("Unidades", contador);
+        
         guardarPedido("pedidoGuardado", JSON.stringify(cart));
         cart.calcularPrecioTotal(); 
         
